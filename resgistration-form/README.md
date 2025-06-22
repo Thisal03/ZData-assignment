@@ -1,12 +1,88 @@
-# React + Vite
+# Multi-Step Registration Form
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## Prerequisites
 
-Currently, two official plugins are available:
+- Node.js (version 16 or higher)
+- npm or yarn package manager
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Setup Instructions
 
-## Expanding the ESLint configuration
+1. **Clone the repository**
+   ```bash
+   git clone <repository-url>
+   cd resgistration-form
+   ```
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+2. **Install dependencies**
+   ```bash
+   npm install
+   ```
+
+3. **Install axios (if not already included)**
+   ```bash
+   npm install axios
+   ```
+
+4. **Create environment file**
+   Create a `.env` file in the project root:
+   ```env
+   REACT_APP_API_BASE_UR=https://your-api-base.com
+   ```
+   Replace `https://your-api-base.com` with your actual API base URL.
+
+5. **Start the development server**
+   ```bash
+   npm run dev
+   ```
+
+6. **Open your browser**
+   Navigate to `http://localhost:5173` (or the URL shown in your terminal)
+
+## How to Run
+
+### Development Mode
+```bash
+npm run dev
+```
+
+### Build for Production
+```bash
+npm run build
+```
+
+### Preview Production Build
+```bash
+npm run preview
+```
+
+## Assumptions and Decisions
+
+### Technical Decisions
+
+1. **Vite over Create React App**
+   - Chose Vite for faster development experience and modern build tooling
+
+3. **Axios for API Calls**
+   - Chose Axios over fetch for better error handling and request/response interceptors
+   - Centralized API configuration in `axiosInstance.js`
+
+
+### Security Considerations
+
+1. **Client-side Validation**
+   - Provides immediate user feedback
+   - Note: Server-side validation is still required for security
+
+2. **Password Confirmation**
+   - Ensures users enter their intended password
+   - Real-time matching validation
+
+3. **Environment Variables**
+   - API base URL configurable via environment variables
+   - No hardcoded sensitive information
+
+## Dependencies
+
+- **React 18** - UI library
+- **Vite** - Build tool and dev server
+- **Axios** - HTTP client for API calls
