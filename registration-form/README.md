@@ -10,7 +10,7 @@
 1. **Clone the repository**
    ```bash
    git clone <repository-url>
-   cd resgistration-form
+   cd registration-form
    ```
 
 2. **Install dependencies**
