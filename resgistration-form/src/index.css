@@ -1,57 +1,56 @@
 :root {
+  --primary: #008B8B;
+  --primary-hover: #004d4d;
+  --danger: #e74c3c;
+  --gray: #888;
+  --background: #004d4d;
+  --white: #fff;
+  --input-border: #ccc;
+  --input-invalid: #e74c3c;
+  --input-invalid-bg: #fff6f6;
   font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;
   font-weight: 400;
-
   color-scheme: light dark;
-  color: rgba(255, 255, 255, 0.87);
-  background-color: #242424;
-
+  color: var(--gray);
+  background-color: var(--background);
   font-synthesis: none;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
-a {
-  font-weight: 500;
-  color: #646cff;
-  text-decoration: inherit;
-}
-a:hover {
-  color: #535bf2;
-}
-
-body {
+html, body {
   margin: 0;
-  display: flex;
-  place-items: center;
+  padding: 0;
   min-width: 320px;
   min-height: 100vh;
+  background: var(--background);
+  color: var(--gray);
 }
 
-h1 {
-  font-size: 3.2em;
-  line-height: 1.1;
+h1, h2, h3, h4, h5, h6 {
+  font-weight: 600;
+  margin: 0 0 0.5em 0;
 }
 
-button {
-  border-radius: 8px;
-  border: 1px solid transparent;
-  padding: 0.6em 1.2em;
-  font-size: 1em;
-  font-weight: 500;
+input, button, select, textarea {
   font-family: inherit;
-  background-color: #1a1a1a;
-  cursor: pointer;
-  transition: border-color 0.25s;
+  font-size: 1rem;
 }
-button:hover {
-  border-color: #646cff;
+
+a {
+  color: var(--primary);
+  text-decoration: none;
 }
-button:focus,
-button:focus-visible {
-  outline: 4px auto -webkit-focus-ring-color;
+a:hover {
+  color: var(--primary-hover);
+}
+
+/* Remove all default button styles, handled in App.css */
+button {
+  all: unset;
+  box-sizing: border-box;
 }
 
 @media (prefers-color-scheme: light) {
